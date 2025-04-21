@@ -75,22 +75,25 @@ function App() {
   const toUnit = unitTypes[type].units.find((u) => u.value === to);
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-800 via-gray-900 to-blue-900">
       <div className="w-full max-w-3xl mx-4 md:mx-auto bg-white/20 backdrop-blur-lg border border-white/30 shadow-2xl rounded-3xl p-10 md:p-16 flex flex-col items-center glass-card">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-8 text-center text-white drop-shadow-lg">Online Unit Converter</h1>
-        <div className="mb-6 w-full">
-          <label className="block mb-2 text-lg md:text-2xl font-semibold text-white">Type</label>
-          <select
-            value={type}
-            onChange={handleTypeChange}
-            className="w-full border-none rounded-xl px-5 py-4 text-xl md:text-2xl bg-white/40 backdrop-blur-md focus:ring-2 focus:ring-purple-400 outline-none"
-          >
+        {/* Tabs for unit types */}
+        <div className="mb-8 w-full flex justify-center">
+          <div className="flex gap-2 md:gap-6 bg-white/10 p-2 md:p-3 rounded-full overflow-x-auto scrollbar-hide w-full max-w-full">
             {Object.keys(unitTypes).map((t) => (
-              <option key={t} value={t}>
+              <button
+                key={t}
+                onClick={() => handleTypeChange({ target: { value: t } })}
+                className={`min-w-[110px] flex-shrink-0 whitespace-nowrap px-3 md:px-8 py-2 md:py-3 rounded-full text-base md:text-2xl font-semibold transition-all duration-200
+                  ${type === t
+                    ? 'bg-gradient-to-br from-blue-800 via-purple-800 to-gray-900 text-gray-100 shadow-lg border border-blue-700'
+                    : 'bg-white/10 text-gray-200 hover:bg-gray-700/30 hover:text-white'}`}
+              >
                 {t}
-              </option>
+              </button>
             ))}
-          </select>
+          </div>
         </div>
         <div className="flex flex-col md:flex-row gap-4 mb-6 w-full">
           <div className="flex-1">
