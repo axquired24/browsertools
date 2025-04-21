@@ -6,6 +6,7 @@ const tools = [
   { name: "Password Generator", path: "/password-generator", desc: "Create strong passwords and check their strength." },
   { name: "Text Analysis", path: "/text-analysis", desc: "Analyze your text for stats and keyword frequency." },
   { name: "Pomodoro Timer", path: "/pomodoro", desc: "Focus with the Pomodoro technique and stay productive." },
+  { name: "Flex Generator", path: "/flex-generator", desc: "Visually build and customize advanced flex layouts with live preview and code export." },
 ];
 
 export default function Splash() {

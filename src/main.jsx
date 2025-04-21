@@ -6,6 +6,7 @@ import UnitConverter from "./UnitConverter";
 import PasswordGenerator from "./PasswordGenerator";
 import TextAnalysis from "./TextAnalysis";
 import Pomodoro from "./Pomodoro";
+import FlexGenerator from "./FlexGenerator";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/password-generator" element={<PasswordGenerator />} />
         <Route path="/text-analysis" element={<TextAnalysis />} />
         <Route path="/pomodoro" element={<Pomodoro />} />
+        <Route path="/flex-generator" element={<FlexGenerator />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
