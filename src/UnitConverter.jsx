@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const unitTypes = {
   Length: {
@@ -64,6 +65,8 @@ export default function UnitConverter() {
   const [to, setTo] = useState(unitTypes["Length"].units[1].value);
   const [input, setInput] = useState(1);
 
+  const navigate = useNavigate();
+
   const handleTypeChange = (e) => {
     setType(e.target.value);
     setFrom(unitTypes[e.target.value].units[0].value);
@@ -76,6 +79,7 @@ export default function UnitConverter() {
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-800 via-gray-900 to-blue-900">
+      <button onClick={() => navigate("/")} className="absolute left-4 top-4 md:left-10 md:top-10 px-5 py-2 rounded-full bg-gray-800/70 text-blue-200 font-semibold shadow hover:bg-blue-900 transition z-10">← Back</button>
       <div className="w-full max-w-3xl mx-4 md:mx-auto bg-white/20 backdrop-blur-lg border border-white/30 shadow-2xl rounded-3xl p-10 md:p-16 flex flex-col items-center glass-card">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-8 text-center text-white drop-shadow-lg">Online Unit Converter</h1>
         {/* Tabs for unit types */}
@@ -139,7 +143,6 @@ export default function UnitConverter() {
           <span className="text-2xl md:text-4xl font-bold text-white drop-shadow-lg">{Number.isFinite(result) && toUnit ? `${result} ${toUnit.value}` : "-"}</span>
         </div>
         <div className="text-xs text-white/70 text-center mt-6 w-full">
-          {/* Placeholder for ads or affiliate links */}
           <span>Ad space</span>
         </div>
       </div>

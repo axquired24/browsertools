@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MODES = [
   { name: "Focus", minutes: 25, color: "from-blue-600 to-blue-900" },
@@ -39,6 +40,7 @@ export default function Pomodoro() {
   const [quote, setQuote] = useState(motivationalQuotes[0]);
   const timerRef = useRef(null);
   const audioRef = useRef(null);
+  const navigate = useNavigate();
 
   // Pick a random quote on mount
   useEffect(() => {
@@ -105,6 +107,7 @@ export default function Pomodoro() {
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950">
+      <button onClick={() => navigate("/")} className="absolute left-4 top-4 md:left-10 md:top-10 px-5 py-2 rounded-full bg-gray-800/70 text-blue-200 font-semibold shadow hover:bg-blue-900 transition z-10">← Back</button>
       <audio ref={audioRef} src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfa1c82.mp3" preload="auto" />
       <div className="w-full max-w-md mx-4 md:mx-auto bg-gray-900/80 border border-gray-800 shadow-xl rounded-2xl p-8 md:p-12 flex flex-col items-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center text-gray-100">Pomodoro Focus Timer</h1>

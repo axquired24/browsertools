@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const defaultLength = 16;
 
@@ -91,6 +92,7 @@ export default function PasswordGenerator() {
   const [copied, setCopied] = useState(false);
   const [animateBtn, setAnimateBtn] = useState(false);
   const prevStrength = useRef(0);
+  const navigate = useNavigate();
 
   function handleGenerate() {
     setAnimateBtn(true);
@@ -115,6 +117,7 @@ export default function PasswordGenerator() {
 
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950">
+      <button onClick={() => navigate("/")} className="absolute left-4 top-4 md:left-10 md:top-10 px-5 py-2 rounded-full bg-gray-800/70 text-blue-200 font-semibold shadow hover:bg-blue-900 transition z-10">← Back</button>
       <div className="w-full max-w-lg mx-4 md:mx-auto bg-gray-900/80 border border-gray-800 shadow-xl rounded-2xl p-8 md:p-12 flex flex-col items-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-6 text-left w-full text-gray-100">Password Generator</h1>
         <div className="w-full flex flex-col md:flex-row md:items-center gap-4 mb-8">
