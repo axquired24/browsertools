@@ -1,0 +1,131 @@
+/* Glassmorphism styles */
+.glass-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+.glass-container {
+  background: rgba(255,255,255,0.18);
+  border-radius: 28px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.19);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 480px;
+  width: 100%;
+  border: 1.5px solid rgba(255,255,255,0.34);
+}
+.glass-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.glass-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #6a3093;
+  letter-spacing: 0.02em;
+}
+.glass-subtitle {
+  font-size: 1.1rem;
+  color: #a18cd1;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.glass-section {
+  margin-bottom: 2rem;
+}
+.glass-section-title {
+  font-size: 1.1rem;
+  color: #6a3093;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.glass-achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.glass-achievement-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.34);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(106,48,147,0.08);
+  padding: 0.75rem 1.2rem;
+  border: 1px solid rgba(255,255,255,0.24);
+  backdrop-filter: blur(2px);
+}
+.glass-achievement-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.glass-achievement-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #6a3093;
+}
+.glass-achievement-desc {
+  font-size: 0.97rem;
+  color: #a18cd1;
+}
+.glass-leaderboard {
+  background: rgba(255,255,255,0.34);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(106,48,147,0.08);
+  padding: 1rem 0.5rem;
+  border: 1px solid rgba(255,255,255,0.24);
+  backdrop-filter: blur(2px);
+}
+.glass-leaderboard-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(161,140,209,0.18);
+  font-size: 1.1rem;
+  color: #6a3093;
+}
+.glass-leaderboard-row:last-child {
+  border-bottom: none;
+}
+.glass-leaderboard-rank {
+  font-weight: bold;
+  color: #a18cd1;
+  margin-right: 0.7rem;
+}
+.glass-leaderboard-name {
+  flex: 1;
+  text-align: left;
+}
+.glass-leaderboard-score {
+  font-weight: bold;
+  color: #a18cd1;
+  margin-left: 0.7rem;
+}
+.glass-leaderboard-row.first-place {
+  background: rgba(255,255,255,0.5);
+  color: #fbc2eb;
+  font-weight: bold;
+}
+.glass-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #a18cd1;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .glass-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .glass-title {
+    font-size: 1.3rem;
+  }
+  .glass-section-title {
+    font-size: 1rem;
+  }
+}

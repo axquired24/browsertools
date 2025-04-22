@@ -1,0 +1,129 @@
+/* Neumorphism (Soft UI) styles */
+.neumorph-bg {
+  min-height: 100vh;
+  background: #e0e5ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+.neumorph-container {
+  background: #e0e5ec;
+  border-radius: 28px;
+  box-shadow: 8px 8px 24px #b8b9be, -8px -8px 24px #ffffff;
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 480px;
+  width: 100%;
+}
+.neumorph-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.neumorph-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #4a4a4a;
+  letter-spacing: 0.02em;
+}
+.neumorph-subtitle {
+  font-size: 1.1rem;
+  color: #6c6c6c;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.neumorph-section {
+  margin-bottom: 2rem;
+}
+.neumorph-section-title {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.neumorph-achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.neumorph-achievement-card {
+  display: flex;
+  align-items: center;
+  background: #e0e5ec;
+  border-radius: 16px;
+  box-shadow: 6px 6px 16px #b8b9be, -6px -6px 16px #ffffff;
+  padding: 0.75rem 1.2rem;
+  border: none;
+  transition: box-shadow 0.2s;
+}
+.neumorph-achievement-card:hover {
+  box-shadow: 2px 2px 8px #b8b9be, -2px -2px 8px #ffffff;
+}
+.neumorph-achievement-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.neumorph-achievement-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+.neumorph-achievement-desc {
+  font-size: 0.97rem;
+  color: #6c6c6c;
+}
+.neumorph-leaderboard {
+  background: #e0e5ec;
+  border-radius: 16px;
+  box-shadow: 4px 4px 12px #b8b9be, -4px -4px 12px #ffffff;
+  padding: 1rem 0.5rem;
+}
+.neumorph-leaderboard-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #d1d9e6;
+  font-size: 1.1rem;
+  color: #4a4a4a;
+}
+.neumorph-leaderboard-row:last-child {
+  border-bottom: none;
+}
+.neumorph-leaderboard-rank {
+  font-weight: bold;
+  color: #7a7a7a;
+  margin-right: 0.7rem;
+}
+.neumorph-leaderboard-name {
+  flex: 1;
+  text-align: left;
+}
+.neumorph-leaderboard-score {
+  font-weight: bold;
+  color: #6c6c6c;
+  margin-left: 0.7rem;
+}
+.neumorph-leaderboard-row.first-place {
+  background: #f0f0f3;
+  color: #4a4a4a;
+  font-weight: bold;
+}
+.neumorph-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #6c6c6c;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .neumorph-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .neumorph-title {
+    font-size: 1.3rem;
+  }
+  .neumorph-section-title {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,130 @@
+/* Material Design inspired styles */
+.material-bg {
+  min-height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+.material-container {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(60,60,60,0.18), 0 1.5px 4px rgba(0,0,0,0.07);
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 480px;
+  width: 100%;
+  border: 1px solid #e0e0e0;
+}
+.material-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.material-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1976d2;
+  letter-spacing: 0.02em;
+}
+.material-subtitle {
+  font-size: 1.1rem;
+  color: #424242;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.material-section {
+  margin-bottom: 2rem;
+}
+.material-section-title {
+  font-size: 1.1rem;
+  color: #1976d2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.material-achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.material-achievement-card {
+  display: flex;
+  align-items: center;
+  background: #e3f2fd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #bbdefb;
+  padding: 0.75rem 1.2rem;
+  border-left: 6px solid #1976d2;
+  transition: box-shadow 0.2s;
+}
+.material-achievement-card:hover {
+  box-shadow: 0 4px 16px #90caf9;
+}
+.material-achievement-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.material-achievement-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1565c0;
+}
+.material-achievement-desc {
+  font-size: 0.97rem;
+  color: #424242;
+}
+.material-leaderboard {
+  background: #e3f2fd;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #bbdefb;
+  padding: 1rem 0.5rem;
+}
+.material-leaderboard-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #bbdefb;
+  font-size: 1.1rem;
+  color: #1976d2;
+}
+.material-leaderboard-row:last-child {
+  border-bottom: none;
+}
+.material-leaderboard-rank {
+  font-weight: bold;
+  color: #1565c0;
+  margin-right: 0.7rem;
+}
+.material-leaderboard-name {
+  flex: 1;
+  text-align: left;
+}
+.material-leaderboard-score {
+  font-weight: bold;
+  color: #424242;
+  margin-left: 0.7rem;
+}
+.material-leaderboard-row.first-place {
+  background: #fffde7;
+  color: #fbc02d;
+  font-weight: bold;
+}
+.material-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #757575;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .material-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .material-title {
+    font-size: 1.3rem;
+  }
+  .material-section-title {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,133 @@
+/* Brutalism styles */
+.brutal-bg {
+  min-height: 100vh;
+  background: #fff200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial Black', 'Arial', sans-serif;
+}
+.brutal-container {
+  background: #fff;
+  border: 6px solid #000;
+  border-radius: 0;
+  box-shadow: 8px 8px 0 #000;
+  padding: 2.5rem 2rem 2rem 2rem;
+  max-width: 480px;
+  width: 100%;
+}
+.brutal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.brutal-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #000;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.brutal-subtitle {
+  font-size: 1.1rem;
+  color: #f00;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.brutal-section {
+  margin-bottom: 2rem;
+}
+.brutal-section-title {
+  font-size: 1.1rem;
+  color: #000;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.brutal-achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.brutal-achievement-card {
+  display: flex;
+  align-items: center;
+  background: #fff200;
+  border: 3px solid #000;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 #000;
+  padding: 0.75rem 1.2rem;
+}
+.brutal-achievement-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.brutal-achievement-title {
+  font-size: 1.05rem;
+  font-weight: 900;
+  color: #000;
+}
+.brutal-achievement-desc {
+  font-size: 0.97rem;
+  color: #f00;
+  font-weight: bold;
+}
+.brutal-leaderboard {
+  background: #fff200;
+  border: 3px solid #000;
+  border-radius: 0;
+  box-shadow: 2px 2px 0 #000;
+  padding: 1rem 0.5rem;
+}
+.brutal-leaderboard-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #000;
+  font-size: 1.1rem;
+  color: #000;
+  font-weight: 900;
+}
+.brutal-leaderboard-row:last-child {
+  border-bottom: none;
+}
+.brutal-leaderboard-rank {
+  font-weight: bold;
+  color: #f00;
+  margin-right: 0.7rem;
+}
+.brutal-leaderboard-name {
+  flex: 1;
+  text-align: left;
+}
+.brutal-leaderboard-score {
+  font-weight: bold;
+  color: #000;
+  margin-left: 0.7rem;
+}
+.brutal-leaderboard-row.first-place {
+  background: #fff;
+  color: #f00;
+  font-weight: bold;
+}
+.brutal-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #000;
+  font-size: 0.95rem;
+  font-weight: 900;
+}
+
+@media (max-width: 600px) {
+  .brutal-container {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .brutal-title {
+    font-size: 1.3rem;
+  }
+  .brutal-section-title {
+    font-size: 1rem;
+  }
+}
